@@ -1,0 +1,28 @@
+.employee{
+    display: flex;
+    justify-content: center;
+}
+form{
+    padding: 70px;
+    /* border: 3px solid ;  */ 
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+    background: linear-gradient(#98a5bf, #378cc0);
+}
+.femalebutton{
+    margin-left: 60px;
+}
+.add{
+    margin-top: 20px;
+    background-color: rgb(13, 202, 35);
+    width: 65px;
+    height: 25px;
+    border-radius: 5px;
+}
+.cancel{
+    margin-left: 10px;
+    background-color: crimson;
+    width: 60px;
+    height: 25px;
+    border-radius: 5px;
+}

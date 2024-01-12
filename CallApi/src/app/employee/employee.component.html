@@ -1,0 +1,53 @@
+<div class="employee">
+<form [formGroup]="EmployeeForm">
+    <label>
+        Employee Name:<br><input type="text" name="empname" formControlName="empname">
+    </label><br>
+    
+    <div *ngIf="EmployeeForm.get('empname')?.touched && EmployeeForm.get('empname')?.errors?.['required']">
+    Employee Name is required!
+    </div>
+
+    <label>
+        Employee Salary:<br><input type="number" name="empsalary" formControlName="empsalary">
+    </label><br>
+    
+    <label>
+        Employee Address:<br><input type="text" name="empaddress" formControlName="empaddress">
+    </label><br>
+
+    <label>Gender:
+        <input type="radio" class="name" name="gender" value="male" formControlName="gender"> Male
+        <br><input type="radio" class="femalebutton" name="gender" value="female" formControlName="gender"> Female<br>
+    </label>
+    <!-- <label>
+        Gender:<br><input type="text" placeholder="Enter Male or Female" name="gender" formControlName="gender">
+    </label><br> -->
+
+    <label>
+        Phone no:<br><input type="number" name="phone" formControlName="phone">
+    </label><br>
+
+    <div *ngIf="EmployeeForm.get('phone')?.touched && EmployeeForm.get('phone')?.errors?.['required']">
+        Phone No is required!
+    </div>
+
+    <label>
+        Email:<br><input type="text" name="email" formControlName="email">
+    </label><br>
+
+    <div *ngIf="EmployeeForm.get('email')?.touched && EmployeeForm.get('email')?.errors?.['required']">
+        Email is required!
+    </div>
+
+    <label>
+        Department:<br><input type="text" name="department" formControlName="department">
+    </label><br>
+
+
+    <div>
+        <button type="button" class="add" (click)="AddEmployee()" [disabled]="EmployeeForm.invalid">Add</button>
+        <button type="button" class="cancel">Cancel</button>
+    </div>
+</form>
+</div>

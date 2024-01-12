@@ -1,0 +1,64 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information Table</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<table>
+    <thead>
+        <tr>
+            <th>empid</th>
+            <th>empname</th>
+            <th>empsalary</th>
+            <th>empaddress</th>
+            <th>gender</th>
+            <th>phone</th>
+            <th>email</th>
+            <th>department</th>
+        </tr>
+    </thead>
+    <tbody id="getData">
+        <!-- <tr >
+            <td>John Doe</td>
+            <td>123 Main St, Cityville</td>
+            <td>********</td>
+            <td>Male</td>
+        </tr> -->
+
+        <tr *ngFor="let r of result">
+            <td>{{r.empid}}</td>
+            <td>{{r.empname}}</td>
+            <td>{{r.empsalary}}</td>
+            <td>{{r.empaddress}}</td>
+            <td>{{r.gender}}</td>
+            <td>{{r.phone}}</td>
+            <td>{{r.email}}</td>
+            <td>{{r.department}}</td>
+        </tr>
+
+
+
+    </tbody>
+</table>
+
+</body> 
+ 
+
